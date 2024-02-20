@@ -27,7 +27,7 @@ const Nav = (props: { children: ReactNode; className?: HTMLProps<HTMLElement>['c
 
   return (
     <React.Fragment>
-      <div className='sticky inset-0 z-10 min-w-full rounded-none border-none bg-black/90 px-4 py-4 shadow-sm shadow-gray-900 2xl:px-36'>
+      <div className='sticky inset-0 z-10 h-fit min-w-full rounded-none border-none bg-black/90 px-4 py-4 shadow-sm shadow-gray-900 2xl:px-36'>
         <NavWrapper
           data={navList}
           openNavbar={openNavbar}

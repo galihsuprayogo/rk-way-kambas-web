@@ -9,14 +9,14 @@ const NavWrapper = (props: {
   openNavbar?: boolean
   setOpenNavbar?: (isOpen: boolean) => void
 }) => (
-  <div className='relative flex h-fit w-full flex-row items-center justify-end bg-green-100 lg:justify-between'>
-    <div className='hidden w-full flex-row items-center justify-around bg-purple-400 lg:flex'>
+  <div className='relative flex h-fit w-full flex-row items-start justify-end py-2 lg:justify-between'>
+    <div className='hidden w-full flex-row items-center justify-around lg:flex'>
       {props.data?.map((item, index) => (
         <NavList key={index} title={item.title} target={item.target} href={item.href} />
       ))}
     </div>
     <div
-      className={`${props.openNavbar ? 'block' : 'hidden'} absolute inset-0 z-40 flex h-fit flex-col items-start justify-center space-y-5 bg-red-900 lg:hidden`}
+      className={`${props.openNavbar ? 'block' : 'hidden'} sticky inset-0 z-40 mt-10 flex flex-grow flex-col items-start justify-center space-y-5 overflow-y-scroll rounded-lg bg-transparent px-3 shadow-lg lg:hidden`}
     >
       {props.data?.map((item, index) => (
         <NavList key={index} title={item.title} target={item.target} href={item.href} />
