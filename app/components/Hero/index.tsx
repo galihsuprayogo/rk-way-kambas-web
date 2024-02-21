@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <div className='order-last grid min-h-[85vh] grid-cols-1 bg-none lg:grid-cols-2'>
+    <div className='grid min-h-[85vh] grid-cols-1 bg-none lg:grid-cols-2'>
       {/* left section */}
       <Image
         src='/photos/photos_1.jpg'
