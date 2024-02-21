@@ -1,6 +1,6 @@
 import React, { HTMLProps, ReactNode, useCallback, useEffect, useState } from 'react'
 import { useNavbarContext } from '@/states'
-import { NavWrapper } from 'components'
+import { Footer, NavWrapper } from 'components'
 import { NavListProps } from '@/types'
 
 const Nav = (props: { children: ReactNode; className?: HTMLProps<HTMLElement>['className'] }) => {
@@ -35,6 +35,7 @@ const Nav = (props: { children: ReactNode; className?: HTMLProps<HTMLElement>['c
         />
       </div>
       <div className={`mx-auto bg-transparent ${props.className}`}>{props.children}</div>
+      <Footer />
     </React.Fragment>
   )
 }
