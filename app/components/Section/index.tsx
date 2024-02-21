@@ -41,6 +41,24 @@ const Section = () => {
     },
   ])
 
+  const [sectionTextFour, setSectionTextFour] = useState<Array<{ text: string }>>([
+    {
+      text: 'When Fajar arrived on December a year ago, he decided not to wait for the fires to spread. He and his team quickly set up a fire break one kilometer long and 30 meters wide at Rawa Kadut. A fire break is land cleared of plants to halt the progress of fires. “I want to stop all the fires, so we don’t get a repeat of what happened last year, when we lost almost all our reforestation work,” he said.',
+    },
+    {
+      text: 'Fire breaks are effective in fighting fires when resources are limited. Last October, a fire broke out in the area at around at 3pm. Fajar, Arum and the team worked hard to put it out. However, it was too big and their equipment was limited. They decided to use the fire breaks to prevent the fire from reaching the reforestation area. That day, the team worked until 2am. At around 10am, another blaze was spotted west of camp but was quickly ex-tinguished',
+    },
+    {
+      text: '“It’s great working with Fajar. We coordinate well,” said Arum, whose job is to maintain contacts with residents of Bungur. Suharno, a forest police superintendent who coordinates firefighting operations at the Way Kambas National Park, agreed, as did AleRT coordinator Rama Budhiana and Mukhlisin, the Bungur section chief.',
+    },
+    {
+      text: '“Every week, four or five of our guys work with Fajar and his team to keep guard and handle fires,” said Mukhlisin, “Fajar and his friends are great workers.”',
+    },
+    {
+      text: 'The total land scorched by fire at Way Bungur last August came to about 1,500 hectares. By October, 2,000 hectares were totally damaged. Nevertheless, Fajar and his team’s rapid response has saved about 22,000 evergreen trees and shrubs planted by Silvagama on its 22.8 hectares of reforestation land.',
+    },
+  ])
+
   return (
     <div className='my-10 flex w-full flex-col items-center justify-center bg-white px-10 md:px-0'>
       {/* section one */}
@@ -97,7 +115,7 @@ const Section = () => {
       {/* section three & fajar bio */}
       <div className='flex w-full justify-end bg-none px-8 md:w-[70%]'>
         <div className='flex flex-col-reverse items-start justify-around md:flex-row'>
-          <div className='flex max-w-xl flex-col space-y-10 border-t-[0.1rem] border-t-black pr-0 pt-8 md:border-r-[0.1rem] md:border-t-0 md:border-r-black md:pr-8 md:pt-0'>
+          <div className='flex max-w-full flex-col space-y-10 border-t-[0.1rem] border-t-black pr-0 pt-8 md:max-w-xl md:border-r-[0.1rem] md:border-t-0 md:border-r-black md:pr-8 md:pt-0'>
             {sectionTextThree.map((item, index) => (
               <span key={index} className='text-base font-medium leading-8 text-black'>
                 {item.text}
@@ -105,7 +123,7 @@ const Section = () => {
             ))}
           </div>
           {/*  fajar bio section */}
-          <div className='flex max-w-md flex-col space-y-10 pb-8 pl-0 md:pb-0 md:pl-8'>
+          <div className='flex max-w-full flex-col space-y-10 pb-8 pl-0 md:max-w-md md:pb-0 md:pl-8'>
             <div className='flex flex-col space-y-1.5'>
               <span className='text-xl font-bold text-primary-900'>
                 Fajar Sandhika Negara
@@ -162,6 +180,25 @@ const Section = () => {
             </div>
           </div>
         </div>
+      </div>
+      {/* section four */}
+      <div className='my-14 flex w-full flex-col space-y-6 md:my-20 md:w-[80%] lg:w-[45%]'>
+        <span className='text-2xl font-bold leading-10 text-black'>
+          {`“The program implementation is good, and he is always on location during fires. He coordinates well with the public, officials and the forest police on the ground. And he works closely with the head of SPTN II.”`}
+        </span>
+        <div className='flex flex-col space-y-1'>
+          <span className='text-lg font-bold text-black'>Rama Budiana</span>
+          <span className='text-base font-semibold tracking-normal text-black'>
+            Coordinator, TFCA-Sumatra AleRT Consortium Program.
+          </span>
+        </div>
+      </div>
+      <div className='flex w-full flex-col space-y-10 md:w-[60%] lg:w-[38%]'>
+        {sectionTextFour.map((item, index) => (
+          <span key={index} className='text-lg font-medium leading-8 text-black'>
+            {item.text}
+          </span>
+        ))}
       </div>
     </div>
   )
