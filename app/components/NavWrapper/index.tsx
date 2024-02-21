@@ -12,7 +12,9 @@ const ButtonDonateLanguage = (props: {
 }) => (
   <div className={`${props.className} flex-col space-y-3 bg-none`}>
     <span className={`${props.textAlign} text-base font-semibold text-white`}>{`EN | ID`}</span>
-    <span className='bg-primary-900 px-6 py-1 text-lg font-bold text-white'>Donate</span>
+    <span className='bg-primary-900 px-6 py-1 text-lg font-bold text-white hover:cursor-pointer'>
+      Donate
+    </span>
   </div>
 )
 

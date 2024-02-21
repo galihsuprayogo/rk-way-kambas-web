@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 
 const Section = () => {
@@ -22,6 +23,21 @@ const Section = () => {
     },
     {
       text: 'The team fought the fire with water pumps and branches cut from trees. The fire was finally out by 5:15pm. They also succeeded in putting out a fire on 2.5 hectares of reforestation area. Exhausted, when they got back at around 8:45pm, another fire was spotted east of the camp. The team went right back to work, extinguishing the fire some 45 minutes later.',
+    },
+  ])
+
+  const [sectionTextThree, setSectionTextThree] = useState<Array<{ text: string }>>([
+    {
+      text: 'All through August to October, the team at Silvagama Foundation discovered this was their additional work: keeping watch over the area, putting out fires and preventing flames from spreading. Fajar’s real job is actually doing reforestation work.',
+    },
+    {
+      text: 'The Silvagama Foundation, established on November 12, 2009, is involved in nature conservation work. At Way Kambas National Park, Silvagama works with the AleRT Consortium to carry out reforestation projects. AleRT gets its funding from the Tropical Forest Conservation Action for Sumatra (TFCA-Sumatra).',
+    },
+    {
+      text: 'Silvagama manages a reforestation area of about 100 hectares at Rawa Kadut, with a planting time frame of three years. The area is part of the Bungur SPTN II section of the national park. More than 9,200 trees were planted in the reforestation program started on February last year. Their target is to plant 31,200 trees in three years. The trees planted are Schima wallichii evergreens, Peronema canescens evergreen bushes and Eugenia, which are all known to hold up well after forest fires. While above-ground trunks may be scorched, their roots survive and sprout new green branches in time. This is what Tempo saw at Rawa Kadut two weeks ago.',
+    },
+    {
+      text: '“Our first plot of land was consumed by fire last year,” said Silvagama founder Timer Manurung. The area is fire-prone. Most of the fires are set by the community who believe burning makes the soil fertile and to flush out wild life, making them easier to hunt. Timer tasked Fajar to do the replanting and to control any fires. Fajar has been on duty since November 2014.',
     },
   ])
 
@@ -60,6 +76,92 @@ const Section = () => {
             {item.text}
           </span>
         ))}
+      </div>
+      {/* picture section */}
+      <div className='my-20 flex h-full w-full bg-white md:w-[70%]'>
+        <Image
+          src='/photos/photos_2.jpg'
+          alt='hero'
+          placeholder='empty'
+          blurDataURL='/photos/photos_2.jpg'
+          height={0}
+          width={0}
+          sizes='100vw'
+          style={{
+            objectFit: 'contain',
+            filter: 'brightness(130%)',
+          }}
+          className='h-full w-full'
+        />
+      </div>
+      {/* section three & fajar bio */}
+      <div className='flex w-full justify-end bg-none px-8 md:w-[70%]'>
+        <div className='flex flex-col-reverse items-start justify-around md:flex-row'>
+          <div className='flex max-w-xl flex-col space-y-10 border-t-[0.1rem] border-t-black pr-0 pt-8 md:border-r-[0.1rem] md:border-t-0 md:border-r-black md:pr-8 md:pt-0'>
+            {sectionTextThree.map((item, index) => (
+              <span key={index} className='text-base font-medium leading-8 text-black'>
+                {item.text}
+              </span>
+            ))}
+          </div>
+          {/*  fajar bio section */}
+          <div className='flex max-w-md flex-col space-y-10 pb-8 pl-0 md:pb-0 md:pl-8'>
+            <div className='flex flex-col space-y-1.5'>
+              <span className='text-xl font-bold text-primary-900'>
+                Fajar Sandhika Negara
+                <br></br>
+                Simanjuntak
+              </span>
+              <span className='text-sm font-medium text-black'>Date of birth:</span>
+              <span className='text-sm font-medium text-black'>Pandeglang, February 22, 1986</span>
+            </div>
+            <div className='flex flex-col space-y-2'>
+              <span className='text-sm font-semibold text-black'>Education:</span>
+              <div className='flex flex-col space-y-2.5'>
+                <span className='text-sm font-medium text-black'> Informatics and </span>
+                <span className='text-sm font-medium text-black'> ComputerStudies, </span>
+                <span className='text-sm font-medium text-black'> Mathla’ul Anwar </span>
+                <span className='text-sm font-medium text-black'> University, Banten </span>
+              </div>
+            </div>
+            <div className='flex flex-col space-y-2'>
+              <span className='text-sm font-semibold text-black'>Organizational Experience:</span>
+              <ul className='flex list-disc flex-col space-y-2'>
+                <li>
+                  <div className='flex flex-col space-y-2.5'>
+                    <span className='text-sm font-medium text-black'>
+                      Student Nature Lovers Club
+                    </span>
+                    <span className='text-sm font-medium text-black'>
+                      (Primapala) of Pandeglang,
+                    </span>
+                    <span className='text-sm font-medium text-black'>High School No.4</span>
+                  </div>
+                </li>
+              </ul>
+              <ul className='flex list-disc flex-col space-y-2'>
+                <li>
+                  <div className='flex flex-col space-y-2.5'>
+                    <span className='text-sm font-medium text-black'>Nature Conservation</span>
+                    <span className='text-sm font-medium text-black'>Student Association</span>
+                    <span className='text-sm font-medium text-black'>
+                      (Himala), Mathla’ul Anwar
+                    </span>
+                    <span className='text-sm font-medium text-black'>University, Banten</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className='flex flex-col space-y-2'>
+              <span className='text-sm font-semibold text-black'>Career:</span>
+              <div className='flex flex-col space-y-2.5'>
+                <span className='text-sm font-medium text-black'>Auriga Nusantara Foundation</span>
+                <span className='text-sm font-medium text-black'> (previously the Silvagama </span>
+                <span className='text-sm font-medium text-black'> Foundation) (2011-to date) </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
