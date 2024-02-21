@@ -30,7 +30,7 @@ const Footer = () => {
 
   return (
     <footer className='flex w-full flex-col bg-black px-4 py-8 2xl:px-32'>
-      <div className='flex w-full flex-col items-start justify-around space-y-8 py-5 md:flex-row md:flex-wrap md:space-y-0'>
+      <div className='flex w-full flex-col items-start justify-around space-y-8 pb-14 pt-7 md:flex-row md:flex-wrap md:space-y-0'>
         {contents.map((item, index) => (
           <div key={index} className='flex flex-col space-y-3 font-bold'>
             <span className='text-xl uppercase text-white'>{item.title}</span>
@@ -42,8 +42,8 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className='h-10 w-full border-y-2 border-white  bg-black md:h-20'></div>
-      <div className='flex flex-col flex-wrap items-start justify-evenly space-y-5 py-5 md:flex-row md:items-center md:space-y-0'>
+      <div className='h-10 w-full border-y-[0.5px] border-white bg-black md:h-24'></div>
+      <div className='flex flex-col flex-wrap items-start justify-evenly space-y-5 py-8 md:flex-row md:items-center md:space-y-0'>
         <Image
           src='/logo.png'
           alt='navbar-logo'
